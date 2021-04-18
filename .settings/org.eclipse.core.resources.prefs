@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//app/views/Alunos/form.html=UTF-8
+encoding//app/views/Alunos/listar.html=UTF-8
+encoding//app/views/Application/index.html=UTF-8
+encoding//app/views/diarios/listagem.html=UTF-8
+encoding//app/views/disciplinas/formDisciplina.html=UTF-8
+encoding//app/views/disciplinas/listar.html=UTF-8
+encoding//app/views/main.html=UTF-8
+encoding//app/views/professores/form.html=UTF-8
+encoding//app/views/professores/listar.html=UTF-8
+encoding//app/views/turmas/form.html=UTF-8
+encoding//app/views/turmas/listar.html=UTF-8
+encoding/<project>=UTF-8

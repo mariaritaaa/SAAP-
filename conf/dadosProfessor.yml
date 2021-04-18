@@ -1,0 +1,41 @@
+Professor(joaon):
+   nome: João Neto
+   matricula: 20201074010010
+   senha: admin01
+
+Professor(admin):
+   nome: admin
+   matricula: admin
+   senha: admin
+
+Professor(clara):
+   nome: Maria Clara
+   matricula: 20201074010011
+   senha: admin02
+
+Professor(carlos):
+   nome: Carlos Eduardo
+   matricula: 20201074010012
+   senha: admin03
+ 
+
+Professor(joaols):
+   nome: João Helis
+   matricula: 20201074010013
+   senha: admin04
+
+Professor(moabe):
+   nome: Moabe Pina
+   matricula: 20201074010014
+   disciplina: Biologia
+   senha: admin05
+
+Professor(lucilene):
+   nome: Lucilene Ramos 
+   matricula: 20201074010015
+   senha: admin06
+
+Professor(alvaro):
+   nome: Alvaro Sakoneski
+   matricula: 20201074010016
+

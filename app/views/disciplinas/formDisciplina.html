@@ -1,0 +1,68 @@
+#{extends 'main.html' /}
+#{set title:'Cadastro de Disciplina' /}
+
+<form action="@{disciplinas.salvar}">
+
+
+ <div class="error-pagewrap">
+		<div class="error-page-int">
+			<div class="text-center custom-login">
+				
+				#{if disciplina?.id}
+				<h2>Edição de disciplina</h2>
+				<p>Edite uma disciplina</p>
+				#{/if}
+				#{else}
+				<h2>Cadastro de disciplina</h2>
+				<p>Registre uma nova disciplina!</p>
+				#{/else}
+				
+		
+			</div>
+			<div class="content-error">
+				<div class="hpanel">
+                    <div class="panel-body">
+                      
+                            <div class="row">
+                            	<input type="hidden" name="disciplina.id" value="${disciplina?.id}"> 
+                            	   <div class="form-group col-lg-12">
+                                   <label for = "nome" >Nome:</label>
+                                   <input id="nome" type="text" name="disciplina.nome" value="${disciplina?.nome}" class="form-control" >
+                               		#{error 'disciplina.nome' /}
+                                </div>
+                                
+                                 <div class="form-group col-lg-6">
+                                   <label for = "nome" >Código:</label>
+                                   <input id="nome" type="text" name="disciplina.codigo" value="${disciplina?.codigo}" class="form-control" >
+                                #{error 'disciplina.codigo' /}
+                                </div>
+                                
+                               <div class="form-group col-lg-6">
+                                
+									<label for ="pro">Professor:</label>
+									<select name="disciplina.professor.id" class="form-control" id="pro">
+										<option value="none" selected="" disabled="">Selecione o professor</option>
+										#{list items: professores, as: 'professor'}
+										<option value="${professor.id}" #{if disciplina?.professor?.id == professor?.id} selected #{/if}>${professor.nome}</option>
+										#{/list}
+									</select>
+</div>
+                                
+                               
+                             
+                            <div class="butao">
+                            #{if disciplina?.id}
+								 <button type="submit" class="btn btn-success loginbtn">Editar</button>
+							#{/if}
+							#{else}
+								<button type="submit" class="btn btn-success loginbtn">Cadastrar</button>
+							#{/else}
+								 
+                            </div>
+                    </div>
+                </div>
+			</div>
+			
+		</div>   
+    </div>
+</form>

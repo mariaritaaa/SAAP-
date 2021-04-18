@@ -1,0 +1,52 @@
+#{extends 'main.html' /}
+#{set title:'Listagem de disciplinas' /}
+
+<div class="static-table-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="sparkline8-list">
+                            <div class="sparkline8-hd">
+                                <div class="main-sparkline8-hd">
+                                    <h1>LISTA DE DISCIPLINAS</h1>
+                                </div>
+                            </div>
+                            <div class="sparkline8-graph">
+                                <div class="static-table-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nome</th>
+                                                <th>Professor</th>
+                                                <th>Opção</th>
+                                                
+                                          
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                             #{list items:lista, as:'disciplina'}
+                                            <tr>
+                                           
+                                                <td>${disciplina.id}</td>
+                                                <td>${disciplina.nome}</td>
+                                                <td>${disciplina?.professor?.nome}</td>
+                                                <td><a href='@{disciplinas.editar(disciplina.id)}' >Editar</a> | 
+													<a href='@{disciplinas.deletar(disciplina.id)}' >Deletar</a></td>
+                                                
+                                         
+                                            </tr>
+                                         
+                                            #{/list}
+                                            #{else}
+                                            <td> <h4>Nenhuma disciplina cadastrada!</h4></td>
+                                            #{/else}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        </div>
+    </div>

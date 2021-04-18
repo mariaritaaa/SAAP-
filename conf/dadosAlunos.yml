@@ -1,0 +1,23 @@
+Aluno(mariar):
+   nome: Maria Rita Araújo
+   matricula: 20171074010018
+   senha: aluno01
+   turma: 1
+
+Aluno(brenda):
+   nome: Brenda Evelyn Correia 
+   matricula: 20171074010019
+   turma: 1
+   senha: aluno02
+
+Aluno(rimele):
+   nome: Rímele Natalia
+   matricula: 20171074010015
+   turma: 1
+   senha: alun03
+
+Aluno(karol):
+   nome: Karoline Paiva
+   matricula: 20171074010014
+   turma: 1
+   senha: alun04

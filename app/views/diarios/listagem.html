@@ -1,0 +1,64 @@
+#{extends 'main.html' /}
+#{set title:'Diarios' /}
+
+
+
+
+<div class="static-table-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="sparkline8-list">
+                            <div class="sparkline8-hd">
+                                <div class="main-sparkline8-hd">
+                                    <h1>MEUS DIÁRIOS</h1>
+                                </div>
+                            </div>
+                            <div class="sparkline8-graph">
+                                <div class="static-table-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                
+                                                <th>meu nome </th>
+                                                <th>Nome da disciplina </th>
+                                                
+                                                
+                                          
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        	 
+                                             
+                                             
+                                            <tr>
+                                           		
+                                                <td>${pro.nome}</td>
+                                                <td>${pro.disciplinas.nome}</td>
+                                            
+                                                
+                                                                                           
+                                            </tr>
+                                         
+                                         	
+                                         
+                                           	
+                                            #{else}
+                                            <td> <h4>Você não possui diários!</h4></td>
+                                          	#{/else}
+                                        	
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        </div>
+    </div>
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+#{extends 'main.html' /}
+#{set title:'Listagem' /}
+
+
+<div class="static-table-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="sparkline8-list">
+                            <div class="sparkline8-hd">
+                                <div class="main-sparkline8-hd">
+                                    <h1>LISTA DE ALUNOS</h1>
+                                </div>
+                            </div>
+                            <div class="sparkline8-graph">
+                                <div class="static-table-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nome</th>
+                                                <th>Turma</th>
+                                                <th>Opção</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                             #{list items:lista, as:'alun'}
+                                            <tr>
+                                           
+                                                <td>${alun.id}</td>
+                                                <td>${alun.nome} </td>
+                                                <td>${alun?.turma?.nome}</td>
+                                                <td><a href='@{Alunos.editar(alun.id)}' >Editar</a> | 
+													<a href='@{Alunos.deletar(alun.id)}' >Deletar</a> </td>
+                                            </tr>
+                                         
+                                            #{/list}
+                                            #{else}
+                                            <td> <h4>Nenhum aluno cadastrado!</h4></td>
+                                            #{/else}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        </div>
+    </div>

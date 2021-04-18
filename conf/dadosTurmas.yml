@@ -1,0 +1,17 @@
+Turma(t1):
+   ano: 4
+   curso: Informática
+   nome: 4INF-1M
+   turno: matutino
+
+Turma(4qm):
+   ano: 4
+   curso: Quimíca
+   nome: 4QM-1V
+   turno: vespertino
+
+Turma(4rp):
+   ano: 4
+   curso: Recursos Pesqueiros
+   nome: 4RP-1V
+   turno: vespertino

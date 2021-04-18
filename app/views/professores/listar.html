@@ -1,0 +1,57 @@
+#{extends 'main.html' /}
+#{set title:'Listagem de professores' /}
+
+<div class="static-table-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sparkline8-list">
+                            <div class="sparkline8-hd">
+                                <div class="main-sparkline8-hd">
+                                    <h1>LISTA DE PROFESSORES</h1>
+                                </div>
+                            </div>
+                            <div class="sparkline8-graph">
+                                <div class="static-table-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr> <!-- linha --> 
+                                            
+                                            	<th>Opcão</th> <!-- coluna -->
+                                                <th>Nome</th>
+                                                <th>Disciplinas</th>
+                                                
+                                           
+                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                             #{list items:lista, as:'professor'}
+                                            <tr>
+                                           		<td>                                                
+                                                <a href='@{Professores.editar(professor.id)}' >Editar</a> | 
+												<a href='@{Professores.deletar(professor.id)}' >Deletar</a> </td>
+                                                
+                                                <td>${professor.nome} </td>
+                                                <td>#{list items:professor.disciplinas, as:'disciplina'}
+                                               	 ${disciplina.nome}
+                                               	</td>
+                                               
+                                               	
+                                               	</tr>
+                                              
+                                            
+                                            #{/list}
+                                            #{/list}
+                                            #{else}
+                                            <td> <h4>Nenhum professor cadastrado!</h4></td>
+                                            #{/else}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        </div>
+    </div>

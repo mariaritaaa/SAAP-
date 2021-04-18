@@ -1,0 +1,50 @@
+#{extends 'main.html' /}
+#{set title:'Listagem de turmas' /}
+
+<div class="static-table-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="sparkline8-list">
+                            <div class="sparkline8-hd">
+                                <div class="main-sparkline8-hd">
+                                    <h1>LISTA DE TURMAS</h1>
+                                </div>
+                            </div>
+                            <div class="sparkline8-graph">
+                                <div class="static-table-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nome</th>
+                                                <th>Curso</th>
+                                                <th>Opções</th>
+                                          
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                             #{list items:lista, as:'turma'}
+                                            <tr>
+                                           
+                                                <td>${turma.id}</td>
+                                                <td><a href="@{turmas.detalhes(turma.id)}">${turma.nome} </a></td>
+                                                <td>${turma.curso}</td>
+                                                <td><a href='@{turmas.editar(turma.id)}' >Editar</a> | 
+													<a href='@{turmas.deletar(turma.id)}' >Deletar</a> </td>
+                                         
+                                            </tr>
+                                         
+                                            #{/list}
+                                            #{else}
+                                            <td> <h4>Nenhuma turma cadastrada!</h4></td>
+                                            #{/else}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        </div>
+    </div>

@@ -1,0 +1,48 @@
+#{extends 'main.html' /}
+#{set title:'Formulário de professores' /}
+
+
+<form action="@{Professores.salvar}">
+
+
+ <div class="error-pagewrap">
+		<div class="error-page-int">
+			<div class="text-center custom-login">
+				<h2>Cadastro de professor</h2>
+				<p>Registre um professor!</p>
+			</div>
+			<div class="content-error">
+				<div class="hpanel">
+                    <div class="panel-body">
+                      
+                            <div class="row">
+                            	<input type="hidden" name="prof.id" value="${prof?.id}"> 
+                            	   <div class="form-group col-lg-12">
+                                   <label for = "nome" >Nome:</label>
+                                   <input id="nome" type="text" name="prof.nome" value="${prof?.nome}" class="form-control" >
+                                     #{error 'prof.nome' /}
+                                </div>
+                               
+                                <div class="form-group col-lg-6">
+                                     <label for = "matricula" >Matricula:</label>
+                                   <input id="matricula" type="text" name="prof.matricula" value="${prof?.matricula}" class="form-control" >
+                                    #{error 'prof.matricula' /}
+                                </div>
+                                
+                                <div class="form-group col-lg-6">
+                                     <label for = "senha" >Senha:</label>
+                                   <input id="senha" type="password" name="prof.senha" value="${prof?.senha}" method ="post" class="form-control" >
+                                 #{error 'prof.senha' /}
+                                </div>
+                            </div>
+                            <div class="butao">
+                                <button type="submit" class="btn btn-success loginbtn">Cadastrar</button>
+                              
+                            </div>
+                    </div>
+                </div>
+			</div>
+			
+		</div>   
+    </div>
+</form>
